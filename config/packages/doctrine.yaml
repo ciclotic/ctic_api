@@ -11,7 +11,7 @@ doctrine:
         url: '%env(resolve:DATABASE_URL)%'
     orm:
         auto_generate_proxy_classes: true
-        naming_strategy: doctrine.orm.naming_strategy.underscore
+        #naming_strategy: doctrine.orm.naming_strategy.underscore
         auto_mapping: true
         mappings:
             App:
@@ -23,6 +23,42 @@ doctrine:
             CTICWarehouse:
                 is_bundle: false
                 type: annotation
-                dir: '%kernel.project_dir%/../almacenes/src/Warehouse/Warehouse/Domain'
-                prefix: 'CTIC\Warehouse\Warehouse\Domain'
+                dir: '%kernel.project_dir%/../almacenes/src/Warehouse'
+                prefix: 'CTIC\Warehouse'
                 alias: CTICWarehouse
+            CTICCustomer:
+                is_bundle: false
+                type: annotation
+                dir: '%kernel.project_dir%/../clientes/src/Customer'
+                prefix: 'CTIC\Customer'
+                alias: CTICCustomer
+            CTICApp:
+                is_bundle: false
+                type: annotation
+                dir: '%kernel.project_dir%/../config/src/App'
+                prefix: 'CTIC\App'
+                alias: CTICApp
+            CTICDevice:
+                is_bundle: false
+                type: annotation
+                dir: '%kernel.project_dir%/../dispositivos/src/Device'
+                prefix: 'CTIC\Device'
+                alias: CTICDevice
+            CTICDocument:
+                is_bundle: false
+                type: annotation
+                dir: '%kernel.project_dir%/../documentos/src/Document'
+                prefix: 'CTIC\Document'
+                alias: CTICDocument
+            CTICGrh:
+                is_bundle: false
+                type: annotation
+                dir: '%kernel.project_dir%/../grh/src/Grh'
+                prefix: 'CTIC\Grh'
+                alias: CTICGrh
+            CTICProduct:
+                is_bundle: false
+                type: annotation
+                dir: '%kernel.project_dir%/../productos/src/Product'
+                prefix: 'CTIC\Product'
+                alias: CTICProduct
