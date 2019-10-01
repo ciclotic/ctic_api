@@ -1,4 +1,9 @@
 api_platform:
     resource: .
     type: api_platform
-    prefix: /
+    prefix: '/v%api_platform.version%/'
+
+swagger_ui:
+    path: /
+    controller: api_platform.swagger.action.ui
+
