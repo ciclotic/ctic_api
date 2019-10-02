@@ -35,7 +35,7 @@ class ApiController extends AbstractController
         $userCommand->name = $username;
         $userCommand->username = $username;
         $userCommand->enabled = true;
-        $userCommand->permission = 3;
+        $userCommand->permission = 0;
         $userCommand->account = $account;
         $userCommand->defaultCompany = $company;
 
